@@ -1,0 +1,57 @@
+@import url('https://fonts.googleapis.com/css?family=Open+Sans+Condensed:300|Sacramento');
+
+body {
+  background:#00BEBE;
+  font-family: Sacramento;
+  .title {
+    text-align:center; font-size: 80px; padding: 10% 5% 5%;
+    @media screen and (max-width:500px) {
+      font-size: 50px;
+    }
+  }
+  .sub {
+    position:relative;
+    font-family:'Open Sans Condensed';font-size: 20px;display:block;
+    &::before {
+      content:'';
+      display: block;
+      width: 15px;
+      height:1px;
+      background-color:#000;
+      position: absolute;
+      left:50%;
+      top:-10px;
+      @media screen and (max-width:500px) {top:-5px;}
+      transform:translate3d(-50%,0,0);
+    }
+  }
+  
+  svg {
+    max-width: 80%;
+    #bulb {
+      transform-origin: center bottom;
+      animation: float 3s linear alternate infinite;
+    }
+    #cord {
+      animation: skew 3s linear alternate infinite;
+      transform-origin: center bottom;
+    }
+  }
+  
+}//#00ADB5;}
+
+.highlight {
+  #path_ear_dx,
+  #path_ear_sx,
+  #path_ear_cx,
+  #path_inner
+  {fill:#FFEC8B;}
+}
+
+@keyframes float {
+  50% {transform: rotate(2deg);}
+}
+
+@keyframes skew {
+  50% {transform: skew(1deg);}
+}
